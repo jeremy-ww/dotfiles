@@ -1,9 +1,30 @@
 - clean: ['~']
 
+- create:
+    - ~/Documents/projects/
+
 - link:
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
     ~/.zshrc: zshrc
 
+- brew:
+    - nvm
+    - thefuck
+    - yarn
+    - httpie
+    - alfred
+    - sourcetree
+    - zsh
+    - iterm2
 
+- cask:
+    - wechat
+    - 1password
+    - visual-studio-code
+    - slack
+    - postman
+
+- shell:
+    - echo Done
