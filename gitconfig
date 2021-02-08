@@ -1,13 +1,9 @@
 [user]
-	email = jeremy.wu01@sap.com
+	email = wuchengkai0@gmail.com
 	name = Jeremy Wu
-[core]
-	excludesfile = /Users/i542961/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/i542961/.stCommitMsg
