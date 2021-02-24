@@ -87,6 +87,10 @@ end alfred_script</string>
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -104,10 +108,29 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7F70BFB4-7122-4C4E-8518-E1E0ADE54F50</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>keyword</key>
-				<string>salad</string>
+				<string>f</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
@@ -121,23 +144,6 @@ end alfred_script</string>
 			<string>C57207B5-157F-4AE2-8B4B-165AF08EFDE2</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>7F70BFB4-7122-4C4E-8518-E1E0ADE54F50</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
