@@ -4,16 +4,16 @@
 <dict>
 	<key>customSites</key>
 	<dict>
-		<key>38F0833D-15B1-4663-BB74-CC7FC11CD06B</key>
+		<key>50BA1B6F-41CB-4142-A401-2D756937B4A4</key>
 		<dict>
 			<key>enabled</key>
 			<true/>
 			<key>keyword</key>
-			<string>fanyi</string>
+			<string>f</string>
 			<key>text</key>
-			<string>Translate</string>
+			<string>translate</string>
 			<key>url</key>
-			<string>https://translate.google.com</string>
+			<string>https://translate.google.com/?text={query}&amp;op=translate</string>
 			<key>utf8</key>
 			<true/>
 		</dict>
