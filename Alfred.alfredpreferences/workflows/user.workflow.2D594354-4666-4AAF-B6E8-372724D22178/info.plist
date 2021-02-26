@@ -862,7 +862,7 @@ https://github.com/edgarjs/alfred-github-repos/issues</string>
 		<key>CACHE_TTL_SEC_REPO</key>
 		<string>86400</string>
 		<key>GITHUB_ACCESS_TOKEN</key>
-		<string></string>
+		<string>13f66af65a093cf58e0db3bea68daea9484a1e9d</string>
 		<key>GITHUB_API_HOST</key>
 		<string>api.github.com</string>
 		<key>GITHUB_HOST</key>
