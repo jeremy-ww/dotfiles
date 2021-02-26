@@ -23,7 +23,8 @@
         alfred \
         sourcetree \
         zsh \
-        iterm2
+        iterm2 \
+        tig
     - brew install --cask \
         google-chrome \
         wechat \
