@@ -12,24 +12,36 @@
     ~/Alfred.alfredpreferences: Alfred.alfredpreferences
 
 - shell:
-    - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    - brew install \
-        autojump \
-        neofetch \
-        nvm \
-        thefuck \
-        yarn \
-        httpie \
-        alfred \
-        sourcetree \
-        zsh \
-        iterm2 \
-        tig
-    - brew install --cask \
-        google-chrome \
-        wechat \
-        1password \
-        visual-studio-code \
-        slack \
-        postman
+    - 
+        command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        stdin: true
+        stdout: true
+        quiet: true
+    - 
+        command: brew install \
+            autojump \
+            neofetch \
+            nvm \
+            thefuck \
+            yarn \
+            httpie \
+            alfred \
+            sourcetree \
+            zsh \
+            iterm2 \
+            tig
+        stdin: true
+        stdout: true
+        quiet: true
+    - 
+        command: brew install --cask \
+            google-chrome \
+            wechat \
+            1password \
+            visual-studio-code \
+            slack \
+            postman
+        stdin: true
+        stdout: true
+        quiet: true
     - echo Done
