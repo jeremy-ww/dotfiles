@@ -30,5 +30,5 @@
     - 
         command: brew install autojump neofetch nvm thefuck yarn httpie zsh tig
     - 
-        command: brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2
+        command: brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
     - echo Done
