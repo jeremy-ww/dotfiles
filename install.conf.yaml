@@ -6,10 +6,18 @@
 - link:
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
-    ~/.gitconfig: gitconfig
-    ~/.zshrc: zshrc
-    ~/Library/Preferences/com.googlecode.iterm2.plist: com.googlecode.iterm2.plist
-    ~/Alfred.alfredpreferences: Alfred.alfredpreferences
+    ~/.gitconfig: 
+        force: true
+        path: gitconfig
+    ~/.zshrc: 
+        force: true
+        path: zshrc
+    ~/Library/Preferences/com.googlecode.iterm2.plist: 
+        force: true
+        path: com.googlecode.iterm2.plist
+    ~/Alfred.alfredpreferences: 
+        force: true
+        path: Alfred.alfredpreferences
 
 - shell:
     - 
@@ -18,29 +26,12 @@
         stdout: true
         quiet: true
     - 
-        command: brew install \
-            autojump \
-            neofetch \
-            nvm \
-            thefuck \
-            yarn \
-            httpie \
-            alfred \
-            sourcetree \
-            zsh \
-            iterm2 \
-            tig
+        command: brew install autojump neofetch nvm thefuck yarn httpie alfred sourcetree zsh iterm2 tig
         stdin: true
         stdout: true
         quiet: true
     - 
-        command: brew install --cask \
-            google-chrome \
-            wechat \
-            1password \
-            visual-studio-code \
-            slack \
-            postman
+        command: brew install --cask google-chrome wechat 1password visual-studio-code slack postman
         stdin: true
         stdout: true
         quiet: true
