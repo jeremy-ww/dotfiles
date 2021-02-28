@@ -1,3 +1,8 @@
+- defaults:
+    shell:
+        stdout: true
+        stderr: true
+
 - clean: ['~']
 
 - create:
@@ -22,17 +27,8 @@
 - shell:
     - 
         command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        stdin: true
-        stdout: true
-        quiet: true
     - 
         command: brew install autojump neofetch nvm thefuck yarn httpie zsh tig
-        stdin: true
-        stdout: true
-        quiet: true
     - 
         command: brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2
-        stdin: true
-        stdout: true
-        quiet: true
     - echo Done
