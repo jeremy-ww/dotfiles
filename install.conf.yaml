@@ -28,7 +28,7 @@
     - 
         command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - 
-        command: brew install autojump neofetch nvm thefuck yarn httpie zsh tig
+        command: brew install autojump neofetch nvm thefuck yarn httpie zsh zsh-syntax-highlighting tig
     - 
         command: brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
     - echo Done
