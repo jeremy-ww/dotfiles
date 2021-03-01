@@ -11,6 +11,7 @@
 - link:
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
+    ~/.npmrc: npmrc
     ~/.gitconfig: 
         force: true
         path: gitconfig
