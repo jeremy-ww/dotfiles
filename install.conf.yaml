@@ -9,6 +9,7 @@
     - ~/Documents/projects/
 
 - link:
+    ~/.vimrc: vimrc
     ~/.bash_profile: bash_profile
     ~/.bashrc: bashrc
     ~/.npmrc: npmrc
