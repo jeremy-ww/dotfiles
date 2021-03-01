@@ -27,10 +27,8 @@
         path: Alfred.alfredpreferences
 
 - shell:
-    - 
-        command: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    - 
-        command: brew install autojump neofetch nvm thefuck yarn httpie zsh zsh-syntax-highlighting tig
-    - 
-        command: brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
+    - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    - brew install autojump neofetch nvm thefuck yarn httpie zsh zsh-syntax-highlighting tig
+    - brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
+    - npm install --global git-open
     - echo Done
