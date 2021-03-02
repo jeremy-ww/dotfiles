@@ -70,6 +70,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -77,7 +79,7 @@
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>keyword</key>
-				<string>ch</string>
+				<string>c</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -110,7 +112,7 @@ python chrome.py "${PROFILE}" "{query}"</string>
 			<key>uid</key>
 			<string>F5EE6337-C93B-44AE-9DB3-C9C1C204D42F</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -119,6 +121,8 @@ python chrome.py "${PROFILE}" "{query}"</string>
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -127,7 +131,7 @@ python chrome.py "${PROFILE}" "{query}"</string>
 			<key>uid</key>
 			<string>28DD6FE4-9B8F-404F-858E-31FB8159BDAF</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
