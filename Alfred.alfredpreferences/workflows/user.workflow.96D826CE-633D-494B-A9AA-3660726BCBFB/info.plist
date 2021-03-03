@@ -36,7 +36,7 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>keyword</key>
 				<string>gr</string>
 				<key>subtext</key>
@@ -44,7 +44,7 @@
 				<key>text</key>
 				<string>Grammaryly</string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
