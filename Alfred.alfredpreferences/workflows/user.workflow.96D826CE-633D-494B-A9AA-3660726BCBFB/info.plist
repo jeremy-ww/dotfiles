@@ -63,13 +63,13 @@
 				<key>script</key>
 				<string>on run argv
   tell application "chrome"
-    open location "https://app.grammarly.com/ddocs/1071911737"
+    open location "https://app.grammarly.com/ddocs/1071920593"
     repeat until (loading of front window's active tab is false)
     end repeat
     delay 3
 --    execute front window's active tab javascript "document.querySelector('[data-name=\"new-doc-add-btn\"]').click()"
 --    delay 3
-    execute front window's active tab javascript "document.querySelector('.ql-editor').innerHTML = \"&lt;p&gt;" &amp; (the clipboard) &amp; "&lt;/p&gt;\""
+    execute front window's active tab javascript "document.querySelector('.ql-editor').innerHTML = '&lt;p&gt;" &amp; (the clipboard) &amp; "&lt;/p&gt;'"
   end tell
 end run</string>
 				<key>scriptargtype</key>
@@ -109,7 +109,7 @@ end run</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Army-U/alfred-grammarly</string>
 </dict>
