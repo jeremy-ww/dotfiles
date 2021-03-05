@@ -87,9 +87,9 @@
 				<key>keyword</key>
 				<string>fe-id</string>
 				<key>subtext</key>
-				<string></string>
+				<string>Paste your personal extension id here</string>
 				<key>text</key>
-				<string></string>
+				<string>Settings</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -163,14 +163,62 @@ end run</string>
   "items": [
     {
       "title": "JSON",
-      "arg": "JSON"
+      "arg": "json",
+      "subtitle": "Open JSON tools in your browser"
     },
     {
-      "title": "encode",
-      "arg": "encode"
+      "title": "Encode",
+      "arg": "encode",
+      "subtitle": "Open Encode tools in your browser"
+    },
+    {
+      "title": "Regexp",
+      "arg": "regexp",
+      "subtitle": "Open Regexp tools in your browser"
+    },
+    {
+      "title": "Format",
+      "arg": "format",
+      "subtitle": "Open Format tools in your browser"
+    },
+    {
+      "title": "Qrcode",
+      "arg": "qrcode",
+      "subtitle": "Open Qrcode tools in your browser"
+    },
+    {
+      "title": "Codecompress",
+      "arg": "codecompress",
+      "subtitle": "Open Codecompress tools in your browser"
+    },
+    {
+      "title": "Timestamp",
+      "arg": "timestamp",
+      "subtitle": "Open Timestamp tools in your browser"
+    },
+    {
+      "title": "Imagebase64",
+      "arg": "imagebase64",
+      "subtitle": "Open Imagebase64 tools in your browser"
+    },
+    {
+      "title": "Password",
+      "arg": "password",
+      "subtitle": "Open Password tools in your browser"
+    },
+    {
+      "title": "Qrdecode",
+      "arg": "qrdecode",
+      "subtitle": "Open Qrdecode tools in your browser"
+    },
+    {
+      "title": "Postman",
+      "arg": "postman",
+      "subtitle": "Open Postman tools in your browser"
     }
   ]
 }
+
 EOB</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
