@@ -6,6 +6,32 @@
 	<string>fehelper.github-repos.workflow</string>
 	<key>connections</key>
 	<dict>
+		<key>1DF32736-2CED-48A9-992B-0E89AD0D55A6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>23158E0D-8138-4751-AD1B-E655C75260D7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C2FFD76E-A41A-4B44-9357-8897B0402612</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<array>
 			<dict>
@@ -19,8 +45,34 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3B024ACD-52FE-4B9B-88CA-6FA5547118B7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4408793D-0774-444C-8BF8-A6618D7E6A10</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</key>
 		<array/>
+		<key>4408793D-0774-444C-8BF8-A6618D7E6A10</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>817561C8-5076-43C5-87CF-3A0930EC6B11</key>
 		<array>
 			<dict>
@@ -34,7 +86,33 @@
 				<false/>
 			</dict>
 		</array>
+		<key>81D0B414-FCCA-4485-9361-1964A4E814C4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1DF32736-2CED-48A9-992B-0E89AD0D55A6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B8804A78-1D15-442D-92A1-110E129E83A5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C2FFD76E-A41A-4B44-9357-8897B0402612</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -58,6 +136,36 @@
 	<string>FE Helper</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+  set bundleID to (system attribute "alfred_workflow_bundleid")
+  set token to (item 1 of argv)
+
+  tell application id "com.runningwithcrayons.Alfred"
+    set configuration "FE_HELPER_ID" to value token in workflow bundleID
+  end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>817561C8-5076-43C5-87CF-3A0930EC6B11</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -108,13 +216,24 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>on run argv
-    set bundleID to (system attribute "alfred_workflow_bundleid")
-    set token to (item 1 of argv)
+				<string>to getRecordValue(theKey, theList)
+   run script "on run{theKey,theList}
+   return (" &amp; theKey &amp; " of theList )
+end" with parameters {theKey, theList}
+end getRecordValue
 
-    tell application id "com.runningwithcrayons.Alfred"
-        set configuration "FE_HELPER_ID" to value token in workflow bundleID
-    end tell
+on run argv
+  set FE_HELPER_ID to (system attribute "FE_HELPER_ID")
+  set apps to {json:"json-format", encode:"en-decode", regexp:"regexp", format:"code-beautify", qrcode:"qr-code", codecompress:"code-compress", timestamp:"timestamp", imagebase64:"image-base64", password:"password", qrdecode:"qr-decode", postman:"postman"}
+  set app_name to (item 1 of argv)
+  set tools to (getRecordValue(app_name, apps))
+  tell application "chrome"
+    open location "chrome-extension://" &amp; FE_HELPER_ID &amp; "/dynamic/index.html?tool=" &amp; tools
+    repeat until (loading of front window's active tab is false)
+    end repeat
+    delay 0.5
+    tell application "System Events" to key code 9 using {command down}
+  end tell
 end run</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -126,7 +245,7 @@ end run</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>817561C8-5076-43C5-87CF-3A0930EC6B11</string>
+			<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -243,49 +362,130 @@ EOB</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>encode</string>
+				<key>subtext</key>
+				<string>Open Encode tools in your browser</string>
+				<key>text</key>
+				<string>Encode</string>
+				<key>withspace</key>
 				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>to getRecordValue(theKey, theList)
-   run script "on run{theKey,theList}
-   return (" &amp; theKey &amp; " of theList )
-end" with parameters {theKey, theList}
-end getRecordValue
-
-on run argv
-  set FE_HELPER_ID to (system attribute "FE_HELPER_ID")
-  set apps to {json:"json-format", encode:"en-decode", regexp:"regexp", format:"code-beautify", qrcode:"qr-code", codecompress:"code-compress", timestamp:"timestamp", imagebase64:"image-base64", password:"password", qrdecode:"qr-decode", postman:"postman"}
-  set app_name to (item 1 of argv)
-  set tools to (getRecordValue(app_name, apps))
-  tell application "chrome"
-    open location "chrome-extension://" &amp; FE_HELPER_ID &amp; "/dynamic/index.html?tool=" &amp; tools
-    repeat until (loading of front window's active tab is false)
-    end repeat
-    delay 0.5
-    tell application "System Events" to key code 9 using {command down}
-  end tell
-end run</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
+			<string>3B024ACD-52FE-4B9B-88CA-6FA5547118B7</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>encode</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>4408793D-0774-444C-8BF8-A6618D7E6A10</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>format</string>
+				<key>subtext</key>
+				<string>Open Format tools in your browser</string>
+				<key>text</key>
+				<string>Format</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>81D0B414-FCCA-4485-9361-1964A4E814C4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>format</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1DF32736-2CED-48A9-992B-0E89AD0D55A6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>json</string>
+				<key>subtext</key>
+				<string>Open JSON tools in your browser</string>
+				<key>text</key>
+				<string>JSON</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>23158E0D-8138-4751-AD1B-E655C75260D7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>json</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C2FFD76E-A41A-4B44-9357-8897B0402612</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>1DF32736-2CED-48A9-992B-0E89AD0D55A6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>280</integer>
+			<key>ypos</key>
+			<integer>590</integer>
+		</dict>
+		<key>23158E0D-8138-4751-AD1B-E655C75260D7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>700</integer>
+		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
 			<key>xpos</key>
@@ -293,12 +493,26 @@ end run</string>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
+		<key>3B024ACD-52FE-4B9B-88CA-6FA5547118B7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>60</integer>
+			<key>ypos</key>
+			<integer>440</integer>
+		</dict>
 		<key>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>295</integer>
+			<key>ypos</key>
+			<integer>305</integer>
+		</dict>
+		<key>4408793D-0774-444C-8BF8-A6618D7E6A10</key>
 		<dict>
 			<key>xpos</key>
 			<integer>275</integer>
 			<key>ypos</key>
-			<integer>275</integer>
+			<integer>470</integer>
 		</dict>
 		<key>817561C8-5076-43C5-87CF-3A0930EC6B11</key>
 		<dict>
@@ -306,6 +520,13 @@ end run</string>
 			<integer>265</integer>
 			<key>ypos</key>
 			<integer>50</integer>
+		</dict>
+		<key>81D0B414-FCCA-4485-9361-1964A4E814C4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>65</integer>
+			<key>ypos</key>
+			<integer>560</integer>
 		</dict>
 		<key>B5E22061-00F1-47AB-A38A-40E692557CFD</key>
 		<dict>
@@ -317,9 +538,16 @@ end run</string>
 		<key>B8804A78-1D15-442D-92A1-110E129E83A5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>60</integer>
 			<key>ypos</key>
-			<integer>275</integer>
+			<integer>305</integer>
+		</dict>
+		<key>C2FFD76E-A41A-4B44-9357-8897B0402612</key>
+		<dict>
+			<key>xpos</key>
+			<integer>285</integer>
+			<key>ypos</key>
+			<integer>730</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -328,12 +556,10 @@ end run</string>
 		<string>pkgccpejnmalmdinmhkkfafefagiiiad</string>
 	</dict>
 	<key>variablesdontexport</key>
-	<array>
-		<string>FE_HELPER_ID</string>
-	</array>
+	<array/>
 	<key>version</key>
-	<string></string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/Army-U/alfred-fe-helper</string>
 </dict>
 </plist>
