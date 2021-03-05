@@ -3,14 +3,42 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>fehelper.github-repos.workflow</string>
 	<key>connections</key>
 	<dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+				<string>817561C8-5076-43C5-87CF-3A0930EC6B11</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</key>
+		<array/>
+		<key>817561C8-5076-43C5-87CF-3A0930EC6B11</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B5E22061-00F1-47AB-A38A-40E692557CFD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B8804A78-1D15-442D-92A1-110E129E83A5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -27,22 +55,73 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>JSON Formatter</string>
+	<string>FE Helper</string>
 	<key>objects</key>
 	<array>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+    set bundleID to (system attribute "alfred_workflow_bundleid")
+    set token to (item 1 of argv)
+
+    tell application id "com.runningwithcrayons.Alfred"
+        set configuration "FE_HELPER_ID" to value token in workflow bundleID
+    end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>817561C8-5076-43C5-87CF-3A0930EC6B11</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Your personal extension id has been saved</string>
+				<key>title</key>
+				<string>Id saved!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>B5E22061-00F1-47AB-A38A-40E692557CFD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
-				<integer>2</integer>
+				<integer>0</integer>
 				<key>keyword</key>
-				<string>json</string>
+				<string>fe-id</string>
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>JSON Formatter</string>
+				<string></string>
 				<key>withspace</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
@@ -57,46 +136,98 @@
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>68</integer>
 				<key>script</key>
-				<string>osascript &lt;&lt;EOD
-set theURL to "chrome-extension://pkgccpejnmalmdinmhkkfafefagiiiad/json-format/index.html"
-tell application "Google Chrome"
- if windows = {} then
-  make new window
-  set URL of (active tab of window 1) to theURL
- else
-  make new tab at the end of window 1 with properties {URL:theURL}
- end if
- activate
-end tell
-EOD</string>
+				<string>set FE_HELPER_ID to (system attribute "FE_HELPER_ID")
+
+tell application "chrome"
+  open location "chrome-extension://" &amp; FE_HELPER_ID &amp; "/dynamic/index.html?tool=json-format"
+  repeat until (loading of front window's active tab is false)
+  end repeat
+  delay 0.5
+  tell application "System Events" to key code 9 using {command down}
+end tell</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>6</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+			<string>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>fe</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>cat &lt;&lt; EOB
+{
+  "items": [
+    {
+      "title": "JSON",
+      "arg": "JSON"
+    },
+    {
+      "title": "encode",
+      "arg": "encode"
+    }
+  ]
+}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B8804A78-1D15-442D-92A1-110E129E83A5</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
-		<dict>
-			<key>xpos</key>
-			<integer>270</integer>
-			<key>ypos</key>
-			<integer>50</integer>
-		</dict>
 		<key>2C99F6F1-EF16-4CF1-9762-5D05A1FFAA4D</key>
 		<dict>
 			<key>xpos</key>
@@ -104,7 +235,46 @@ EOD</string>
 			<key>ypos</key>
 			<integer>50</integer>
 		</dict>
+		<key>405FBFD9-FBEC-4124-AD6D-5CF0059B217B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>275</integer>
+			<key>ypos</key>
+			<integer>275</integer>
+		</dict>
+		<key>817561C8-5076-43C5-87CF-3A0930EC6B11</key>
+		<dict>
+			<key>xpos</key>
+			<integer>265</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>B5E22061-00F1-47AB-A38A-40E692557CFD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>455</integer>
+			<key>ypos</key>
+			<integer>50</integer>
+		</dict>
+		<key>B8804A78-1D15-442D-92A1-110E129E83A5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>55</integer>
+			<key>ypos</key>
+			<integer>275</integer>
+		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>FE_HELPER_ID</key>
+		<string>pkgccpejnmalmdinmhkkfafefagiiiad</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>FE_HELPER_ID</string>
+	</array>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
