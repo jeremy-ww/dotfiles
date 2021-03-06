@@ -385,6 +385,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string>encode</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -421,6 +423,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string>format</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -457,6 +461,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string>json</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -556,7 +562,9 @@ EOB</string>
 		<string>pkgccpejnmalmdinmhkkfafefagiiiad</string>
 	</dict>
 	<key>variablesdontexport</key>
-	<array/>
+	<array>
+		<string>FE_HELPER_ID</string>
+	</array>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
