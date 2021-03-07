@@ -8,5 +8,7 @@
 		<string>features.websearch.duckduckgo.fallback</string>
 		<string>features.websearch.wiki.fallback</string>
 	</array>
+	<key>showContacts</key>
+	<false/>
 </dict>
 </plist>
