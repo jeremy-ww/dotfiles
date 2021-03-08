@@ -98,8 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-PROMPT_COMMAND="echo -ne \"\033]0;${PWD##*/}\007\"; $PROMPT_COMMAND"
-
 alias proxy='export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
 alias unproxy="unset http_proxy; unset https_proxy;"
 
