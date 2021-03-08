@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/i542961/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -14,7 +14,7 @@ export ZSH="/Users/i542961/.oh-my-zsh"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "awesomepanda" "cloud" "simple" "kolo" "half-life" "jonathan" "fwalch" "cypher" "eastwood" "dpoggi" "emotty" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "awesomepanda" "cloud" "simple" "kolo" "half-life" "jonathan" "fwalch" "cypher" "eastwood" "dpoggi" "emotty" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -72,13 +72,21 @@ ZSH_THEME_RANDOM_CANDIDATES=( "awesomepanda" "cloud" "simple" "kolo" "half-life"
 
 source /usr/local/share/antigen/antigen.zsh
 
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle zsh-autosuggestions
 antigen bundle command-not-found
+
+# Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+# Load the theme.
 antigen theme cloud
 
+# Tell Antigen that you're done.
 antigen apply
 
 # User configuration

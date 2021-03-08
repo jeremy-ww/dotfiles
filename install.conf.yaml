@@ -28,7 +28,7 @@
 
 - shell:
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    - brew install antigen autojump neofetch nvm thefuck yarn httpie zsh tig
+    - brew install antigen bat autojump neofetch nvm thefuck yarn httpie zsh tig
     - brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
     - npm install --global git-open
     - echo Done
