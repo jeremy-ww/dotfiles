@@ -118,8 +118,7 @@ antigen apply
 alias proxy='export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
 alias unproxy="unset http_proxy; unset https_proxy;"
 
-alias nr="yarn run start"
-alias r="yarn run"
+alias s="yarn run start"
 alias code="/usr/local/bin/code"
 alias cat='bat --paging=never'
 
@@ -132,8 +131,6 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=~/.krew/bin:$PATH
 
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias st="open -a SourceTree"
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
