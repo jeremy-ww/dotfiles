@@ -118,3 +118,5 @@ export PATH=~/.krew/bin:$PATH
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias st="open -a SourceTree"
