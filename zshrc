@@ -118,3 +118,4 @@ export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias st="open -a SourceTree"
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
