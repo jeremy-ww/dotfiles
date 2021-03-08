@@ -84,7 +84,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme vercel/zsh-theme
+antigen theme cloud
 
 # Tell Antigen that you're done.
 antigen apply
