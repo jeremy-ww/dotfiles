@@ -8,7 +8,7 @@ export ZSH="/Users/i542961/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="cloud"
+# ZSH_THEME="cloud"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,9 +68,18 @@ ZSH_THEME_RANDOM_CANDIDATES=( "awesomepanda" "cloud" "simple" "kolo" "half-life"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+# plugins=(git zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
+source /usr/local/share/antigen/antigen.zsh
+
+antigen bundle git
+antigen bundle zsh-autosuggestions
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme cloud
+
+antigen apply
 
 # User configuration
 
