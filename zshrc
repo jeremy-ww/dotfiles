@@ -121,6 +121,7 @@ alias unproxy="unset http_proxy; unset https_proxy;"
 alias nr="yarn run start"
 alias r="yarn run"
 alias code="/usr/local/bin/code"
+alias cat='bat --paging=never'
 
 eval $(thefuck --alias f fuck)
 
