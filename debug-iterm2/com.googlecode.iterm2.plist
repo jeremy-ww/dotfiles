@@ -246,7 +246,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Yes</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -268,6 +268,8 @@
 			<string>67E201D7-E3D5-4EA5-93CB-96FB99FB2A3D</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
@@ -798,7 +800,7 @@
 			<key>Window Type</key>
 			<integer>2</integer>
 			<key>Working Directory</key>
-			<string>~/Document/projects</string>
+			<string>/Users/i542961/Documents/projects</string>
 		</dict>
 	</array>
 	<key>OpenArrangementAtStartup</key>
