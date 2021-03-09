@@ -116,15 +116,18 @@ antigen apply
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Alias
 alias proxy='export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
 alias unproxy="unset http_proxy; unset https_proxy;"
 
 alias s="yarn run start"
 alias code="/usr/local/bin/code"
 alias cat='bat --paging=never'
+alias st="open -a SourceTree"
 
 eval $(thefuck --alias f fuck)
 
+# Variables
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -133,8 +136,7 @@ export PATH=~/.krew/bin:$PATH
 
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 
-alias st="open -a SourceTree"
-
+# Execute
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 fpath=(~/.zsh.d/ $fpath)
