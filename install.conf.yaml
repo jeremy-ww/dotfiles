@@ -31,4 +31,5 @@
     - brew install antigen bat autojump neofetch nvm thefuck yarn httpie zsh tig
     - brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
     - npm install --global git-open
+    - curl https://cht.sh/:cht.sh > "/usr/local/bin/cht.sh" && chmod +x "/usr/local/bin/cht.sh"
     - echo Done
