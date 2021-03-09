@@ -8,7 +8,7 @@ export ZSH=~/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="cloud"
+ZSH_THEME="cloud"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -84,7 +84,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme cloud
+# It's too slow.
+# antigen theme cloud
 
 # Tell Antigen that you're done.
 antigen apply
@@ -133,4 +134,7 @@ export PATH=~/.krew/bin:$PATH
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 
 alias st="open -a SourceTree"
+
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+fpath=(~/.zsh.d/ $fpath)
