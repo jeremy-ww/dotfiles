@@ -85,8 +85,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 # It's too slow.
-# antigen theme cloud
-antigen theme robbyrussell
+antigen theme cloud
+# antigen theme robbyrussell
 
 # Tell Antigen that you're done.
 antigen apply
