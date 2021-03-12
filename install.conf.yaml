@@ -11,9 +11,6 @@
 - link:
     ~/.vimrc: vimrc
     ~/.npmrc: npmrc
-    ~/.gitconfig: 
-        force: true
-        path: gitconfig
     ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshrc: 
         force: true
