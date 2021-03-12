@@ -10,12 +10,13 @@
 
 - link:
     ~/.vimrc: vimrc
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
+    # ~/.bash_profile: bash_profile
+    # ~/.bashrc: bashrc
     ~/.npmrc: npmrc
     ~/.gitconfig: 
         force: true
         path: gitconfig
+    ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshrc: 
         force: true
         path: zshrc
@@ -28,8 +29,10 @@
 
 - shell:
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    - brew install antigen bat autojump neofetch nvm thefuck yarn httpie zsh tig
+    - brew install antibody bat autojump neofetch nvm thefuck yarn httpie zsh tig
     - brew install --cask google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
+    - brew tap homebrew/aliases && brew alias i='install' && brew alias ui='uninstall'
+    - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - npm install --global git-open
     - curl https://cht.sh/:cht.sh > "/usr/local/bin/cht.sh" && chmod +x "/usr/local/bin/cht.sh"
     - curl https://cheat.sh/:zsh > ~/.zsh.d/_cht

@@ -68,28 +68,34 @@ ZSH_THEME="cloud"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git zsh-autosuggestions)
+plugins=(git)
 
-source /usr/local/share/antigen/antigen.zsh
+# source /usr/local/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle git
+# antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle djui/alias-tips
+# antigen bundle caarlos0/zsh-mkc
+# antigen bundle zsh-users/zsh-completions
 # antigen bundle command-not-found
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle zdharma/fast-syntax-highlighting
+# antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
 # It's too slow.
-antigen theme cloud
+# antigen theme cloud
 # antigen theme robbyrussell
 
 # Tell Antigen that you're done.
-antigen apply
+# antigen apply
+
+source ~/.zsh_plugins.sh
 
 # User configuration
 
@@ -140,4 +146,4 @@ export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 # Execute
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-fpath=(~/.zsh.d/ $fpath)
+# fpath=(~/.zsh.d/ $fpath)

@@ -1,0 +1,9 @@
+caarlos0/zsh-mkc
+djui/alias-tips
+zdharma/fast-syntax-highlighting
+
+ohmyzsh/ohmyzsh
+
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
