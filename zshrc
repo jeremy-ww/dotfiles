@@ -147,3 +147,5 @@ export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # fpath=(~/.zsh.d/ $fpath)
+
+export PATH=$PATH:$(go env GOPATH)/bin
