@@ -10,8 +10,6 @@
 
 - link:
     ~/.vimrc: vimrc
-    # ~/.bash_profile: bash_profile
-    # ~/.bashrc: bashrc
     ~/.npmrc: npmrc
     ~/.gitconfig: 
         force: true
@@ -36,4 +34,5 @@
     - npm install --global git-open
     - curl https://cht.sh/:cht.sh > "/usr/local/bin/cht.sh" && chmod +x "/usr/local/bin/cht.sh"
     - curl https://cheat.sh/:zsh > ~/.zsh.d/_cht
+    - chmod +x fix-iterm-preference.sh && ./fix-iterm-preference.sh
     - echo Done
