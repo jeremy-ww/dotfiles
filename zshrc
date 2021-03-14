@@ -130,7 +130,7 @@ alias unproxy="unset http_proxy; unset https_proxy;"
 alias s="yarn run start"
 alias code="/usr/local/bin/code"
 alias cat='bat --paging=never'
-alias st="open -a SourceTree"
+alias st="open -a SourceTree ."
 
 eval $(thefuck --alias f fuck)
 
