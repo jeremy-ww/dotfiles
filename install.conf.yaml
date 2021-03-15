@@ -1,4 +1,6 @@
 - defaults:
+    link:
+        relink: true
     shell:
         stdout: true
         stderr: true
@@ -10,7 +12,9 @@
 
 - link:
     ~/.vimrc: vimrc
-    ~/.npmrc: npmrc
+    ~/.npmrc: 
+        if: '[ ! -f ~/.npmrc ]'
+        path: npmrc
     ~/.zsh_plugins.txt: zsh_plugins.txt
     ~/.zshrc: 
         force: true
@@ -32,5 +36,5 @@
     - go get github.com/mattn/twty
     - curl https://cht.sh/:cht.sh > "/usr/local/bin/cht.sh" && chmod +x "/usr/local/bin/cht.sh"
     - curl https://cheat.sh/:zsh > ~/.zsh.d/_cht
-    - chmod +x fix-iterm-preference.sh && ./fix-iterm-preference.sh
+    # - chmod +x fix-iterm-preference.sh && ./fix-iterm-preference.sh
     - echo Done
