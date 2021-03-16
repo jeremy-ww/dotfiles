@@ -62,11 +62,12 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>on run argv
-  tell application "chrome"
+  tell application "/Applications/Google Chrome.app"
+    activate
     open location "https://app.grammarly.com/ddocs/1071920593"
-    repeat until (loading of front window's active tab is false)
-    end repeat
-    delay 3
+--    repeat until (loading of front window's active tab is false)
+--    end repeat
+    delay 4
 --    execute front window's active tab javascript "document.querySelector('[data-name=\"new-doc-add-btn\"]').click()"
 --    delay 3
     execute front window's active tab javascript "document.querySelector('.ql-editor').innerHTML = '&lt;p&gt;" &amp; (the clipboard) &amp; "&lt;/p&gt;'"
