@@ -1,2 +1,3 @@
 message=release(%s): %s
+# https://yarnpkg.com/configuration/yarnrc#defaultSemverRangePrefix
 save-exact=true
