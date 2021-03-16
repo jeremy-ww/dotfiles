@@ -1,1 +1,2 @@
 message=release(%s): %s
+save-exact=true
