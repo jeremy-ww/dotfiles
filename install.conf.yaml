@@ -12,6 +12,9 @@
 
 - link:
     ~/.vimrc: vimrc
+    ~/.gitconfig: 
+        if: '[ ! -f ~/.gitconfig ]'
+        path: gitconfig
     ~/.npmrc: 
         if: '[ ! -f ~/.npmrc ]'
         path: npmrc
