@@ -131,6 +131,7 @@ alias s="yarn run start"
 alias code="/usr/local/bin/code"
 alias cat='bat --paging=never'
 alias st="open -a SourceTree ."
+alias l="colorls -lah"
 
 eval $(thefuck --alias f fuck)
 
