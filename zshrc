@@ -136,16 +136,13 @@ alias l="colorls -lah"
 
 eval $(thefuck --alias f fuck)
 
-# Variables
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 export PATH=~/.krew/bin:$PATH
 
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 
 # Execute
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+eval "$(fnm env)"
 
 export PATH=$PATH:$(go env GOPATH)/bin

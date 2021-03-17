@@ -32,7 +32,7 @@
 - shell:
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - brew tap homebrew/cask-fonts
-    - brew install go antibody git-delta bat autojump neofetch nvm thefuck yarn httpie zsh tig
+    - brew install go antibody git-delta bat autojump neofetch fnm thefuck yarn httpie zsh tig
     - brew install --cask font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
     - brew tap homebrew/aliases && brew alias i='install' && brew alias ui='uninstall'
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
