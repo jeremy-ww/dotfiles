@@ -134,16 +134,20 @@ alias cat='bat --paging=never'
 alias st="open -a SourceTree ."
 alias l="colorls -lah"
 alias copy="clipcopy"
+unalias gcl
 
-eval $(thefuck --alias f fuck)
+# Function 
+function gcl () {
+  git clone --recurse-submodules $1 && cd "$(basename "$_" .git)" && code .
+}
 
+# Variables
 export PATH=~/.krew/bin:$PATH
-
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Execute
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+eval $(thefuck --alias f fuck)
 eval "$(fnm env)"
-
-export PATH=$PATH:$(go env GOPATH)/bin
