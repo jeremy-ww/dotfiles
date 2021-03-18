@@ -1,10 +1,21 @@
+# https://github.com/jonas/tig/blob/master/tigrc#L321
+color "---"			                white	default
+color "index "			            white	default
+color "diff --"			            white	default
+color "@@"			                white	default
+color "Author: "		            white	default
+color "Commit: "		            white	default
+color "AuthorDate: "		        white	default
+color "CommitDate: "		        white	default
+color "TaggerDate: "		        white	default
+color "\ No newline at end of file"	          white	default
+
 color diff-stat                 95      default
 color date                      172     default
 color "Merge: "                 cyan    default
 color graph-commit              red     default
 color id                        167     default
 color "author "                 95      default
-color "Commit: "                90      default
 color cursor                    white   101     bold
 
 color palette-0                 93      default
