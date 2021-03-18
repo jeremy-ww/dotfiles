@@ -21,6 +21,7 @@ color palette-2                 124     default
 color palette-7                 90      default bold
 color delimiter                 90      default
 color main-tracked              99      default bold
+color diff-del                  default 95 
 color "\ No newline at end of file"	          white	default
 
 bind generic	<Enter>	view-diff
