@@ -1,5 +1,9 @@
 [user]
+  email = jeremy.wu01@sap.com
   name = Jeremy Wu
+
+[core]
+  pager = delta
 
 [delta]
   commit-decoration-style = bold box ul "#34fd50"
