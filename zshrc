@@ -134,6 +134,7 @@ alias cat='bat --paging=never'
 alias st="open -a SourceTree ."
 alias l="colorls -lah"
 alias copy="clipcopy"
+alias g="gitui"
 unalias gcl
 
 # Function 
