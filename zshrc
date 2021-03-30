@@ -142,6 +142,27 @@ function gcl () {
   git clone --recurse-submodules $1 && cd "$(basename "$_" .git)" && code .
 }
 
+function pr() {
+  REMOTE_URL=$(git config --get remote.origin.url)
+  GITHUB_TOOLS_URL=https://github.tools.sap
+  GITHUB_WDF_URL=https://github.wdf.sap.corp
+
+  if [[ $REMOTE_URL == "$GITHUB_TOOLS_URL*" ]] then
+    GH_HOST=$GITHUB_TOOLS_URL
+    GITHUB_TOKEN=$GITHUB_TOOLS_TOKEN
+  else
+    if [[ $REMOTE_URL == "git@github.wdf.sap.corp*" ]]; then
+      GH_HOST=GITHUB_WDF_URL
+      GITHUB_TOKEN=$GITHUB_WDF_TOKEN
+    else
+      gh pr view --web
+      return
+    fi
+  fi
+
+  gh pr view --web
+}
+
 # Variables
 export PATH=~/.krew/bin:$PATH
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
