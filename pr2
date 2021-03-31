@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+import subprocess
+import json
+import os
+import re
+
+with open(os.path.expanduser('~/.pr-config.json')) as f:
+  configs = json.load(f)
+
+command = 'gh pr view --web'
+remote_url = subprocess.check_output(['git', 'config', '--get', 'remote.origin.url']).strip().decode()
+
+for pattern, config in configs.items():
+  is_match = re.match(pattern, remote_url)
+  if is_match:
+    os.system(
+      f'GH_HOST={config["host"]} GH_ENTERPRISE_TOKEN={config["token"]} {command}'
+    )
+    break
