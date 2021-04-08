@@ -36,6 +36,7 @@
     - brew tap homebrew/cask-fonts
     - brew install go antibody git-delta bat autojump neofetch fnm thefuck yarn httpie zsh gitui gh
     - brew install --cask cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 shadowsocksx-ng
+    # - brew install --cask power-manager
     - brew tap homebrew/aliases && brew alias i='install' && brew alias ui='uninstall'
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - npm install --global git-open
