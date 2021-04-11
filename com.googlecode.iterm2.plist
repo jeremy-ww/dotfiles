@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AlternateMouseScroll</key>
-	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -16,123 +14,8 @@
 	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>87BABA67-CC88-4AC3-9A67-1389789F7B9C</string>
-	<key>GlobalKeyMap</key>
-	<dict>
-		<key>0x19-0x60000</key>
-		<dict>
-			<key>Action</key>
-			<integer>39</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0x9-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>32</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf700-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>7</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf701-0x300000</key>
-		<dict>
-			<key>Action</key>
-			<integer>6</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x300000-0x0</key>
-		<dict>
-			<key>Action</key>
-			<integer>31</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf702-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>33</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x300000-0x0</key>
-		<dict>
-			<key>Action</key>
-			<integer>30</integer>
-			<key>Label</key>
-			<string></string>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf703-0x320000</key>
-		<dict>
-			<key>Action</key>
-			<integer>34</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf729-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>5</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72b-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>4</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72c-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72c-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>9</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x100000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-		<key>0xf72d-0x20000</key>
-		<dict>
-			<key>Action</key>
-			<integer>8</integer>
-			<key>Text</key>
-			<string></string>
-		</dict>
-	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
-	<key>Hotkey</key>
-	<true/>
-	<key>HotkeyChar</key>
-	<integer>101</integer>
-	<key>HotkeyCode</key>
-	<integer>14</integer>
-	<key>HotkeyMigratedFromSingleToMulti</key>
-	<true/>
-	<key>HotkeyModifiers</key>
-	<integer>1048840</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -153,16 +36,12 @@
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
-				<key>Alpha Component</key>
-				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.3117111607662082</real>
-				<key>Color Space</key>
-				<string>sRGB</string>
+				<real>0.0</real>
 				<key>Green Component</key>
-				<real>0.36964968801342329</real>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.74029922485351562</real>
+				<real>0.73333334922790527</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
@@ -401,8 +280,6 @@
 			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
-			<key>Initial Text</key>
-			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -702,11 +579,9 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>HackNerdFontComplete-Regular 14</string>
+			<string>Monaco 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
-			<key>Non-ASCII Ligatures</key>
-			<false/>
 			<key>Normal Font</key>
 			<string>Monaco 18</string>
 			<key>Only The Default BG Color Uses Transparency</key>
@@ -742,15 +617,6 @@
 				<real>0.8353000283241272</real>
 				<key>Red Component</key>
 				<real>0.70980000495910645</real>
-			</dict>
-			<key>Semantic History</key>
-			<dict>
-				<key>action</key>
-				<string>editor</string>
-				<key>editor</key>
-				<string>com.microsoft.VSCode</string>
-				<key>text</key>
-				<string></string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -829,7 +695,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<true/>
+			<false/>
 			<key>Vertical Spacing</key>
 			<real>0.95999999999999996</real>
 			<key>Visual Bell</key>
@@ -840,50 +706,9 @@
 			<string>/Users/i542961</string>
 		</dict>
 	</array>
-	<key>PointerActions</key>
-	<dict>
-		<key>Button,1,1,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kContextMenuPointerAction</string>
-		</dict>
-		<key>Button,2,1,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kPasteFromClipboardPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeDown,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kPrevWindowPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeLeft,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kPrevTabPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeRight,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kNextTabPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeUp,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kNextWindowPointerAction</string>
-		</dict>
-	</dict>
 	<key>SoundForEsc</key>
 	<false/>
-	<key>TabStyleWithAutomaticOption</key>
-	<integer>1</integer>
 	<key>VisualIndicatorForEsc</key>
-	<false/>
-	<key>findMode_iTerm</key>
-	<integer>0</integer>
-	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>0</integer>
-	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 </dict>
 </plist>
