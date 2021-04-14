@@ -135,6 +135,7 @@ alias st="open -a SourceTree ."
 alias l="colorls -lah"
 alias copy="clipcopy"
 alias u="gitui"
+alias t="yarn test"
 unalias gcl
 
 # Functions
