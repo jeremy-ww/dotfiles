@@ -143,6 +143,10 @@ function gcl () {
   git clone --recurse-submodules $@ && cd "$(basename "$_" .git)" && code .
 }
 
+function cid () {
+  g rev-parse --short HEAD | copy
+}
+
 # Variables
 export PATH=~/.krew/bin:$PATH
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
