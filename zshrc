@@ -144,7 +144,9 @@ function gcl () {
 }
 
 function cid () {
-  g rev-parse --short HEAD | copy
+  id=$(g rev-parse --short HEAD)
+  echo $id
+  echo $id | copy
 }
 
 # Variables
