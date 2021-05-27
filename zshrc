@@ -69,7 +69,7 @@ ZSH_THEME_CLOUD_PREFIX=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx colorize command-not-found)
+# plugins=()
 
 # source /usr/local/share/antigen/antigen.zsh
 
