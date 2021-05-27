@@ -126,6 +126,7 @@ source ~/.zsh_plugins.sh
 
 # Alias
 alias proxy='export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
+alias clash_proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
 alias unproxy="unset http_proxy; unset https_proxy;"
 
 alias s="yarn run start"
@@ -164,5 +165,7 @@ eval "$(fnm env)"
 #### FIG ENV VARIABLES ####
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
+
+clash_proxy
 
 
