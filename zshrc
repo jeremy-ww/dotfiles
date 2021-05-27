@@ -69,7 +69,7 @@ ZSH_THEME_CLOUD_PREFIX=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git osx colorize command-not-found)
 
 # source /usr/local/share/antigen/antigen.zsh
 
@@ -159,3 +159,10 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 eval $(thefuck --alias f fuck)
 eval "$(fnm env)"
+
+
+#### FIG ENV VARIABLES ####
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+
