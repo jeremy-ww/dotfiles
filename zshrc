@@ -156,7 +156,7 @@ export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # Execute
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+eval "$(zoxide init zsh)"
 
 eval $(thefuck --alias f fuck)
 eval "$(fnm env)"
