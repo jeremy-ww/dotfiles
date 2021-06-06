@@ -35,12 +35,11 @@
     - brew tap homebrew/cask-fonts
     - brew install go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gitui gh
     - brew install --cask cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 clashx
-    - yarn global add git-split-diffs
+    - yarn global add git-split-diffs git-open
     - git config --global core.pager "git-split-diffs --color | less -RFX" 
     # - brew install --cask appdelete
     - brew tap homebrew/aliases && brew alias i='install' && brew alias ui='uninstall'
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
-    - npm install --global git-open
     - go get github.com/mattn/twty
     - gem update colorls
     # https://github.com/alebcay/awesome-shell#command-line-productivity
