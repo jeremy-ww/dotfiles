@@ -142,6 +142,5 @@ eval "$(fnm env)"
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
 
-clash_proxy
 
 # zprof
