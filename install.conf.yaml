@@ -37,7 +37,7 @@
     - brew install --cask cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 clashx
     - yarn global add git-split-diffs git-open
     - git config --global core.pager "git-split-diffs --color | less -RFX" 
-    # - brew install --cask appdelete
+    - git config split-diffs.theme-name github-dark-dim
     - brew tap homebrew/aliases && brew alias i='install' && brew alias ui='uninstall'
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - go get github.com/mattn/twty
