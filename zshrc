@@ -126,6 +126,10 @@ function cid () {
   echo $id | copy
 }
 
+function goo() {
+  curl https://www.google.com
+}
+
 # Variables
 export PATH=~/.krew/bin:$PATH
 export KUBECONFIG=~/.kube/kubeconfig--eureka--cos.yaml
@@ -142,5 +146,6 @@ eval "$(fnm env)"
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
 #### END FIG ENV VARIABLES ####
 
+clash_proxy
 
 # zprof
