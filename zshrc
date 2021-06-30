@@ -109,7 +109,10 @@ alias s="yarn run start"
 alias code="/usr/local/bin/code"
 alias cat='bat --paging=never'
 alias st="open -a SourceTree ."
-alias l="colorls -lah"
+alias l='lsd -l'
+alias la='lsd -a'
+alias lla='lsd -la'
+alias lt='lsd --tree'
 alias copy="clipcopy"
 alias u="gitui"
 alias t="yarn test"
