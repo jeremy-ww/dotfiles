@@ -31,6 +31,7 @@
     /usr/local/bin/vp: vpr
 
 - shell:
+    # https://dev.to/equiman/how-to-use-macos-s-touch-id-on-terminal-5fhg
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - brew tap homebrew/cask-fonts
     - brew install lsd go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gitui gh
@@ -38,9 +39,7 @@
     - yarn global add git-split-diffs git-open
     - git config --global core.pager "git-split-diffs --color | less -RFX" 
     - git config split-diffs.theme-name github-dark-dim
-    - brew tap homebrew/aliases && brew alias i='install' && brew alias ui='uninstall'
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - go get github.com/mattn/twty
-    # https://github.com/alebcay/awesome-shell#command-line-productivity
     - chmod +x fix-iterm-preference.sh && ./fix-iterm-preference.sh
     - echo Done

@@ -4,6 +4,8 @@
 <dict>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>BootstrapDaemon</key>
+	<false/>
 	<key>Default Bookmark Guid</key>
 	<string>87BABA67-CC88-4AC3-9A67-1389789F7B9C</string>
 	<key>EnableAPIServer</key>
