@@ -141,7 +141,8 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # Execute
 eval "$(zoxide init zsh)"
 
-eval $(thefuck --alias f fuck)
+export THEFUCK_PRIORITY="git_hook_bypass=1100"
+eval $(thefuck --alias f)
 eval "$(fnm env)"
 
 
