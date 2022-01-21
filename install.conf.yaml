@@ -25,9 +25,6 @@
     ~/Library/Preferences/com.googlecode.iterm2.plist: 
         force: true
         path: com.googlecode.iterm2.plist
-    ~/Alfred.alfredpreferences: 
-        force: true
-        path: Alfred.alfredpreferences
     /usr/local/bin/vp: vpr
 
 - shell:
@@ -35,7 +32,7 @@
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - brew tap homebrew/cask-fonts
     - brew install lsd go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gitui gh
-    - brew install --cask rectangle cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman alfred sourcetree iterm2 clashx
+    - brew install --cask rectangle cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman raycast sourcetree iterm2 clashx
     - yarn global add git-split-diffs git-open static-server
     - git config --global core.pager "git-split-diffs --color | less -RFX" 
     - git config split-diffs.theme-name github-dark-dim
