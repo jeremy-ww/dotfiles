@@ -25,6 +25,9 @@
     ~/Library/Preferences/com.googlecode.iterm2.plist: 
         force: true
         path: com.googlecode.iterm2.plist
+    ~/Raycast:
+        force: true
+        path: Raycast 2022-01-22 14.57.56.rayconfig
     /usr/local/bin/vp: vpr
 
 - shell:
