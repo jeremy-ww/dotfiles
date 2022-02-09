@@ -27,7 +27,7 @@
         path: com.googlecode.iterm2.plist
     ~/Raycast/backup.rayconfig:
         force: true
-        path: Raycast 2022-01-22 16.48.48.rayconfig
+        path: Raycast 2022-02-09 11.23.28.rayconfig
     /usr/local/bin/vp: vpr
 
 - shell:
