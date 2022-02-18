@@ -34,11 +34,11 @@
     # https://dev.to/equiman/how-to-use-macos-s-touch-id-on-terminal-5fhg
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - brew tap homebrew/cask-fonts
-    - brew install lsd go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gitui gh
+    - brew install lsd go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gh
     - brew install --cask hiddenbar cleanshot rectangle cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman raycast sourcetree iterm2 clashx
-    - yarn global add git-split-diffs git-open static-server
-    - git config --global core.pager "git-split-diffs --color | less -RFX" 
-    - git config split-diffs.theme-name github-dark-dim
+    - yarn global add git-open static-server
+    - git config --global user.email "jeremy.wu.real@gmail.com"
+    - git config --global user.name "Jeremy"
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - go get github.com/mattn/twty
     - chmod +x fix-iterm-preference.sh && ./fix-iterm-preference.sh
