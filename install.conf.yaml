@@ -12,6 +12,9 @@
 
 - link:
     ~/.vimrc: vimrc
+    ~/.ssh/config: 
+        if: '[ ! -f ~/.ssh/config ]'
+        path: sshconfig
     ~/.gitconfig: 
         if: '[ ! -f ~/.gitconfig ]'
         path: gitconfig
@@ -28,7 +31,6 @@
     ~/Raycast/backup.rayconfig:
         force: true
         path: Raycast 2022-02-09 11.23.28.rayconfig
-    /usr/local/bin/vp: vpr
 
 - shell:
     # https://dev.to/equiman/how-to-use-macos-s-touch-id-on-terminal-5fhg

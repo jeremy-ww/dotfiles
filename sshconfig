@@ -1,0 +1,11 @@
+# Github
+Host github.com
+    Hostname github.com
+    User git
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+# GitLab
+Host gitlab.com
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_work
