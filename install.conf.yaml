@@ -39,8 +39,6 @@
     - brew install lsd go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gh
     - brew install --cask hiddenbar cleanshot rectangle cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman raycast sourcetree iterm2 clashx
     - yarn global add git-open static-server
-    - git config --global user.email "jeremy.wu.real@gmail.com"
-    - git config --global user.name "Jeremy"
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - go get github.com/mattn/twty
     - chmod +x fix-iterm-preference.sh && ./fix-iterm-preference.sh
