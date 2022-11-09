@@ -1,8 +1,4 @@
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
-# zmodload zsh/zprof
+## zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -147,14 +143,14 @@ eval "$(zoxide init zsh)"
 
 export THEFUCK_PRIORITY="git_hook_bypass=1100"
 eval $(thefuck --alias f)
-eval "$(fnm env)"
+eval "$(fnm env --use-on-cd)"
 
-
-#### FIG ENV VARIABLES ####
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
-
-clash_proxy
+#clash_proxy
 
 # zprof
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# pnpm
+export PNPM_HOME=~/Library/pnpm
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
