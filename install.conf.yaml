@@ -37,7 +37,7 @@
     - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     - brew tap homebrew/cask-fonts
     - brew install lsd go antibody bat zoxide fzf neofetch fnm thefuck yarn httpie zsh gh
-    - brew install --cask sizzy hiddenbar cleanshot rectangle cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman raycast sourcetree iterm2 clashx
+    - brew install --cask shottr sizzy hiddenbar cleanshot rectangle cheatsheet font-hack-nerd-font google-chrome wechat 1password visual-studio-code slack postman raycast sourcetree iterm2 clashx
     - yarn global add git-open static-server
     - antibody bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.sh
     - go get github.com/mattn/twty
