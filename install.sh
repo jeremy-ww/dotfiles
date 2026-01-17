@@ -1,14 +1,13 @@
 brew install --cask 1password
+applite
 betterdisplay
 bettertouchtool
 brave-browser
-chatgpt
 cleanshot
 clocker
 cloudflare-warp
 cursor
 font-hack-nerd-font
-github-copilot-for-xcode
 google-chrome
 hiddenbar
 iterm2
