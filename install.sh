@@ -1,0 +1,22 @@
+brew install --cask 1password
+betterdisplay
+bettertouchtool
+brave-browser
+chatgpt
+cleanshot
+clocker
+cloudflare-warp
+cursor
+font-hack-nerd-font
+github-copilot-for-xcode
+google-chrome
+hiddenbar
+iterm2
+karabiner-elements
+latest
+microsoft-edge
+raycast
+rectangle
+sourcetree
+visual-studio-code
+wechat
